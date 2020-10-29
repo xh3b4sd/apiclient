@@ -1,0 +1,9 @@
+port: 3000
+cluster:
+  name: "kia02"
+  zone: "aws.example.com"
+image:
+  registry: "ghcr.io"
+  organization: "xh3b4sd"
+  repository: "apiclient"
+  tag: ""
