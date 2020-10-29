@@ -16,6 +16,8 @@ jobs:
         uses: "actions/setup-node@v1"
         with:
           node-version: "15.x"
+      - name: "Install React Dependencies"
+        run: "npm install"
 
       - name: "Build React App"
         run: "npm run build"
