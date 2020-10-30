@@ -1,10 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import * as grpcWeb from "grpc-web";
-import * as proto from "xh3b4sd/tscode/pkg/pbf/post";
+import { Post } from "@xh3b4sd/tscode";
+
 
 function App() {
-  // What is going on here?
+  const postAPI = new Post();
+
+  console.log(postAPI)
+  console.log(Post)
+
+  /*
   const client = new proto.post.APIClient("http://0.0.0.0:7777");
 
   const request = new CreateI();
@@ -17,6 +23,7 @@ function App() {
       console.log(response);
     }
   });
+  */
 
   return (
     <div className="App">

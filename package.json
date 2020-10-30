@@ -7,8 +7,8 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "grpc-web": "^1.2.1",
-    "tscode": "git+https://github.com/xh3b4sd/tscode.git#add-npm-module-configuration",
     "react": "^17.0.1",
+    "@xh3b4sd/tscode": "github:xh3b4sd/tscode",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
