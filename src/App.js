@@ -1,17 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import * as grpcWeb from "grpc-web";
-import { Post } from "@xh3b4sd/tscode";
-
+//import * as grpcWeb from "grpc-web";
+import proto from "@xh3b4sd/tscode";
 
 function App() {
-  const postAPI = new Post();
+  const client = new proto.Post("http://0.0.0.0:7777")
 
-  console.log(postAPI)
-  console.log(Post)
-
-  /*
-  const client = new proto.post.APIClient("http://0.0.0.0:7777");
+  console.log(proto)
+  console.log(client)
 
   const request = new CreateI();
   request.setName("create input");
@@ -23,7 +19,6 @@ function App() {
       console.log(response);
     }
   });
-  */
 
   return (
     <div className="App">
