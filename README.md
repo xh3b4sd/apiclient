@@ -12,6 +12,10 @@ be deployed and used.
 helm -n infra install apiclient ./helm/apiclient --set cluster.name=kia02 --set cluster.zone=aws.example.com
 ```
 
+```
+https://apiclient.kia02.aws.example.com
+```
+
 
 
 ### osx
