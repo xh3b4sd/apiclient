@@ -20,6 +20,10 @@ helm -n infra install apiclient ./helm/apiclient --set cluster.name=kia02 --set 
 helm -n infra install apiclient ./helm/apiclient
 ```
 
+```
+http://127.0.0.1:7777
+```
+
 
 
 ### npm
