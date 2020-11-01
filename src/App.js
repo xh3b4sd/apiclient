@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-//import * as grpcWeb from "grpc-web";
-import proto from "@xh3b4sd/tscode";
+import tscode from "@xh3b4sd/tscode";
 
 function App() {
-  const client = new proto.Post("http://0.0.0.0:7777")
+  const client = new tscode.Post.Client("http://127.0.0.1:7777")
 
-  console.log(proto)
-  console.log(client)
+  const req = new tscode.Post.Create.I();
+  req.setName("create input");
 
-  const request = new CreateI();
-  request.setName("create input");
-
-  client.create(request, {}, (err, response) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log(response);
-    }
-  });
+  client.create(req, function(err, res) {
+    console.log(err)
+    console.log(res)
+  })
 
   return (
     <div className="App">
