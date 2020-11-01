@@ -8,10 +8,14 @@ function App() {
   const req = new tscode.Post.Create.I();
   req.setName("create input");
 
-  client.create(req, function(err, res) {
-    console.log(err)
-    console.log(res)
-  })
+  client.create(req, {}, function(err, response) {
+    if (err) {
+      console.log(err.code);
+      console.log(err.message);
+    } else {
+      console.log(response.getMessage());
+    }
+  });
 
   return (
     <div className="App">
