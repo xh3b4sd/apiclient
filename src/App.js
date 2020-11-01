@@ -3,7 +3,7 @@ import './App.css';
 import tscode from "@xh3b4sd/tscode";
 
 function App() {
-  const client = new tscode.Post.Client("http://127.0.0.1:7777")
+  const client = new tscode.Post.Client("https://apiserver.kia04.aws.venturemark.co")
 
   const req = new tscode.Post.Create.I();
   req.setName("create input");
