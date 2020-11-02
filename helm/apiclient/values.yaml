@@ -1,4 +1,3 @@
-port: 3000
 cluster:
   name: ""
   zone: ""
@@ -7,3 +6,4 @@ image:
   organization: "xh3b4sd"
   repository: "apiclient"
   tag: "019723d1002577d44caaa2f165dbb5e4018287ba"
+port: 3000

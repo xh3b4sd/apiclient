@@ -20,5 +20,14 @@ spec:
           ports:
             - name: "http"
               containerPort: 80
+          # All app configuration must happen via environment variables. The app
+          # specific configmap and secret do only hold environment variables the
+          # app itself expects to be configured. Any configuration specific to
+          # different environments will be injected during deployments via helm.
+          envFrom:
+            - configMapRef:
+                name: "{{ .Release.Name }}"
+            - secretRef:
+                name: "{{ .Release.Name }}"
       imagePullSecrets:
         - name: "pull-secret"
